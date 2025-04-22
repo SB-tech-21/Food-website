@@ -19,6 +19,132 @@
 
 <body class="bg-white">
 
+    <!-- Header part or nav bar -->
+    <header>
+        <section class="text-black">
+            <div class="2xl:container mx-auto">
+                <div class=" w-[90%] grid grid-cols-1 md:grid-cols-2 mx-auto">
+                    <div class="flex justify-between items-center">
+                        <img src="https://ik.imagekit.io/4z8covdo9/MERN-COURSE-ASSETS/FOOD-STORE/food-munch-img.png"
+                            alt="logo" class="h-[80px]">
+                        <!-- icons attached -->
+                        <div>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24" id="menu"
+                                fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                class="md:hidden bg-white" stroke-linejoin="round"
+                                class="lucide lucide-menu-icon lucide-menu ">
+                                <line x1="4" x2="20" y1="12" y2="12" />
+                                <line x1="4" x2="20" y1="6" y2="6" />
+                                <line x1="4" x2="20" y1="18" y2="18" />
+                            </svg>
+
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewbox="0 0 24 24"
+                                id="cross" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+                                class=" hidden md:hidden" stroke-linejoin="round" class="lucide lucide-x-icon lucide-x">
+                                <path d="M18 6 6 18" />
+                                <path d="m6 6 12 12" />
+                            </svg>
+                        </div>
+                    </div>
+                    <!-- list added -->
+
+                    <div class="flex justify-center md:flex-row md:justify-end md:items-center">
+                        <nav class="hidden md:block" id="content">
+                            <ul class="flex flex-col justify-center items-center md:flex-row md:gap-4 ">
+                                <li id="choose">Why choose us</li>
+                                <li id="explore menu">Explore Menu</li>
+                                <li id="delivery">Delivery & Payment</li>
+                                <li id="help">Help</li>
+                            </ul>
+                        </nav>
+                    </div>
+                </div>
+            </div>
+
+            <script>
+                const menuElement = document.getElementById('menu')
+                const crossElement = document.getElementById('cross')
+
+                const contentElement = document.getElementById('content')
+
+                const homeElement = document.getElementById('choose')
+                const aboutElement = document.getElementById('explore menu')
+                const HelpElement = document.getElementById('delivery')
+                const ContactElement = document.getElementById('help')
+
+                menuElement.addEventListener('click', () => {
+                    console.log("menu-clicked")
+                    console.log(crossElement)
+                    contentElement.classList.toggle('hidden')
+                    menuElement.classList.toggle('hidden')
+                    crossElement.classList.toggle('hidden')
+                })
+
+                crossElement.addEventListener('click', () => {
+                    contentElement.classList.toggle('hidden')
+                    menuElement.classList.toggle('hidden')
+                    crossElement.classList.toggle('hidden')
+                })
+
+                // crossElement.addEventListener('click', () => {
+                //     // contentElement.className = 'hidden md:block' we have think about this logic
+                //     // console.log(crossElement)
+                //     // crossElement.classList.add('hidden')
+                //     // menuElement.classList.remove('hidden')
+
+                //     menuElement.classList.toggle('hidden')
+                //     crossElement.classList.toggle('hidden')  //simply u can use the toggle and complete the work
+                //     contentElement.classList.toggle('hidden')
+                // })
+
+                // homeElement.addEventListener('click', () => {
+                //     // contentElement.className = 'md:block'
+                //     // console.log(crossElement)
+                //     // crossElement.classList.remove('hidden')
+                //     // menuElement.classList.add('hidden')
+
+                //     menuElement.classList.toggle('hidden')
+                //     crossElement.classList.toggle('hidden')
+                //     contentElement.classList.toggle('hidden')
+                // })
+
+                // aboutElement.addEventListener('click', () => {
+                //     // contentElement.className = 'md:block'
+                //     // console.log(crossElement)
+                //     // crossElement.classList.remove('hidden')
+                //     // menuElement.classList.add('hidden')
+
+                //     menuElement.classList.toggle('hidden')
+                //     crossElement.classList.toggle('hidden')
+                //     contentElement.classList.toggle('hidden')
+                // })
+
+                // HelpElement.addEventListener('click', () => {
+                //     // contentElement.className = 'md:block'
+                //     // console.log(crossElement)
+                //     // crossElement.classList.remove('hidden')
+                //     // menuElement.classList.add('hidden')
+
+                //     menuElement.classList.toggle('hidden')
+                //     crossElement.classList.toggle('hidden')
+                //     contentElement.classList.toggle('hidden')
+                // })
+
+                // ContactElement.addEventListener('click', () => {
+                // contentElement.className = 'md:block'
+                // console.log(crossElement)
+                // crossElement.classList.remove('hidden')
+                // menuElement.classList.add('hidden')
+
+                //     menuElement.classList.toggle('hidden')
+                //     crossElement.classList.toggle('hidden')
+                //     contentElement.classList.toggle('hidden')
+                // })
+            </script>
+        </section>
+    </header>
+
+
     <!-- Front Page Starting -->
     <Section class="py-5 bg-hero-container">
         <div class="2xl:container mx-auto h-[100%] ">
@@ -32,9 +158,7 @@
                             Now</button>
                     </div>
                 </div>
-
             </div>
-
         </div>
     </Section>
     <!-- Front Page Ending -->
@@ -360,7 +484,7 @@
                     <div class="flex flex-col justify-center items-center space-y-3">
                         <div>
                             <img src="https://ik.imagekit.io/e9lbb2htg/Food-Store/food-munch-img.png" alt="logo-img"
-                            class="h-14 ">
+                                class="h-14 ">
                         </div>
                         <p class="text-white">orderfood@foodmunch.com</p>
                         <p class="text-white">123 Ayur Vigyan Nagar, New Delhi, India</p>
